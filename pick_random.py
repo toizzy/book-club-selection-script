@@ -12,7 +12,6 @@ book_lists = {"NYT21st_lessthan500": (30,),
 # There are 1256 movies in criterion, but so it's I guess more balanced we
 # pick a random stream of 100 of them
 criterion_start = random.randint(0, 1156)
-print(criterion_start)
 movie_lists = {"bfi": (100,), 
                "criterion": (criterion_start, criterion_start + 100),
                "variety": (100,)}
@@ -42,7 +41,13 @@ def main():
     args = parser.parse_args()
 
     choices = pick_random(args.media, args.how_many)
-    print(choices)
+
+    print("\n"*1)
+    print(f"The {args.media} selections are....")
+    print("\n"*1)
+    print("\n".join(choices))
+    print("\n".join(["!"*(i*3) for i in range(5)]))
+    print("\n"*3)
 
 if __name__ == "__main__":
     main()
