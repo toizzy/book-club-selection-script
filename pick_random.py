@@ -5,16 +5,18 @@ already_done_books = []
 already_done_movies = []
 
 # Lists are formed by calling range() on the values of each list.
-book_lists = {"NYT21st_lessthan500": (30,),
-              "booker": (1969, 2024),
-              "booker-international": (2005, 2024, 2)}
+book_lists = {"NYT21st": (100,),
+              "booker": (1969, 2025),
+              "booker-international": (2005, 2024, 2),
+              "national-book-award": (1965, 2024)}
 
-# There are 1256 movies in criterion, but so it's I guess more balanced we
+# There are 1256 movies in criterion, but so it' more balanced if we
 # pick a random stream of 100 of them
 criterion_start = random.randint(0, 1156)
 movie_lists = {"bfi": (100,), 
                "criterion": (criterion_start, criterion_start + 100),
-               "variety": (100,)}
+               "variety": (100,),
+               "NYT_movies21": (100,)}
 
 def pick_random(media_type, number):
     if media_type == "book":
